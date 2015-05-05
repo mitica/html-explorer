@@ -1,0 +1,31 @@
+{
+  "name": "html-explorer",
+  "version": "0.0.1",
+  "description": "HTML Page Explorer",
+  "main": "./lib/explorer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mitica/html-explorer.git"
+  },
+  "keywords": [
+    "html",
+    "page",
+    "explorer"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mitica/html-explorer/issues"
+  },
+  "homepage": "https://github.com/Mitica/html-explorer",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "lodash": "^3.8.0",
+    "request": "^2.55.0",
+    "bluebird": "^2.9.25",
+    "entities": "^1.1.1"
+  }
+}
