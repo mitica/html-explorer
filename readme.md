@@ -26,7 +26,7 @@ explorer.explore('http://edition.cnn.com/2015/05/06/asia/salman-khan-bollywood-h
 
 - `url` (String) - input `url` param;
 - `href` (String) - server response url;
-- `canonical` (String) - page canonical
+- `canonical` (String) - page canonical;
 - `title` (String)
 - `description` (String)
 - `keywords` (String)
@@ -41,7 +41,7 @@ explorer.explore('http://edition.cnn.com/2015/05/06/asia/salman-khan-bollywood-h
   + `height` (Number);
   + `alt` (String);
   + `title` (String);
-  + `rating` (Number) - count of words matching with page title words;
+  + `rating` (Number) - count of words matching page title words;
 
 ## API
 
@@ -59,7 +59,7 @@ Explores an url.
   + `validator` (Function) [*noop*] - Validates page after exploring info, throw an error if invalid;
   + `html` (Boolean|String) [false] - Return HTML text or not. If is string it will be used as remote HTML body;
 
-- `images` - images explorer orptions:
+- `images` - images explorer options:
   + `limit` (Number) [5] - maximum number of images to return;
   + `filter` (Object):
     - `minHeight` (Number) [200] - minimum image height;
