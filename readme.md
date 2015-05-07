@@ -16,7 +16,7 @@ Currently it extracts:
 
 ```
 var explorer = require('html-explorer');
-explorer.explore('http://edition.cnn.com/2015/05/06/asia/salman-khan-bollywood-hit-and-run-verdict/index.html')
+explorer.explore('http://edition.cnn.com/')
 .then(function(page){
   // page object
 });
@@ -66,5 +66,8 @@ Explores an url.
     - `minWidth` (Number) [250] - minimum image width;
     - `minRating` (Number) [0] - minimum image rating(...);
     - `invalidExt` ([String]) [gif, png] - invalid image extensions;
-    - `src` (RegExp) [*see source code*] - invalidate image SRC;
+    - `src` (RegExp) [*see source code*] - invalidate image by SRC;
+    - `extraSrc` (RegExp) - invalidate image by SRC;
+    - `orientation` (String) - filter image by orientation. Can be: `portrait` or `landscape`;
+    - `cssClass` (RegExp) - filter image by its css class;
 
