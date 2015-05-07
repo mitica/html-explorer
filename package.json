@@ -1,6 +1,6 @@
 {
   "name": "html-explorer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "HTML Page Explorer",
   "main": "./lib/explorer.js",
   "scripts": {
