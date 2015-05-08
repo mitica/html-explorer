@@ -42,6 +42,8 @@ explorer.explore('http://edition.cnn.com/')
   + `alt` (String);
   + `title` (String);
   + `rating` (Number) - count of words matching page title words;
+  + `type` (String) - (only if `identify` option is true) - can be: `bmp`, `gif`, `jpg`, `png`, `psd`, `svg`, `tiff` or `webp`;
+  + `data` (Buffer) - (only if `identify` option is true) - image data.
 
 ## API
 
@@ -62,12 +64,17 @@ Explores an url.
 - `images` - images explorer options:
   + `limit` (Number) [5] - maximum number of images to return;
   + `filter` (Object):
-    - `minHeight` (Number) [200] - minimum image height;
-    - `minWidth` (Number) [250] - minimum image width;
-    - `minRating` (Number) [0] - minimum image rating(...);
-    - `invalidExt` ([String]) [gif, png] - invalid image extensions;
+    - `minHeight` (Number) [200] - accepted minimum image height;
+    - `minWidth` (Number) [250] - accepted minimum image width;
+    - `minRating` (Number) [0] - accepted minimum image rating(...);
+    - `minRatio` (Number) [null] - accepted minimum image ratio (`ratio`=`width`/`height`);
+    - `maxRatio` (Number) [null] - accepted maximum image ratio;
+    - `invalidExtensions` ([String]) [gif, png] - invalid image extensions;
     - `src` (RegExp) [*see source code*] - invalidate image by SRC;
     - `extraSrc` (RegExp) - invalidate image by SRC;
-    - `orientation` (String) - filter image by orientation. Can be: `portrait` or `landscape`;
     - `cssClass` (RegExp) - filter image by its css class;
+    - `types` (String|[String]) - accepted image types (`bmp`, `gif`, `jpg`, `png`, `psd`, `svg`, `tiff`, `webp`), default: `['jpg']`;
+    - `invalidTypes` (String|[String]) - invalid image types;
+  + `identify` (Boolean) [false] - identify image `width`, `height` and `type` by downloading data;
+  + `data` (Boolean) [false] - set image `data` property. Works only if `identify` is true.
 
