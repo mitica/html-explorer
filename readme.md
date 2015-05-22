@@ -37,7 +37,9 @@ explorer.explore('http://edition.cnn.com/')
 
 - `images` ([Image]) - a list of images:
   + `src` (String) - image src;
-  + `width` (Number) - image width if found;
+  + `viewWidth` (Number) - image view width if founded;
+  + `viewHeight` (Number);
+  + `width` (Number) - real image width;
   + `height` (Number);
   + `alt` (String);
   + `title` (String);
@@ -64,6 +66,8 @@ Explores an url.
 - `images` - images explorer options:
   + `limit` (Number) [5] - maximum number of images to return;
   + `filter` (Object):
+    - `minViewHeight` (Number) [180] - accepted minimum image view height;
+    - `minViewWidth` (Number) [220] - accepted minimum image view width;
     - `minHeight` (Number) [200] - accepted minimum image height;
     - `minWidth` (Number) [250] - accepted minimum image width;
     - `minRating` (Number) [0] - accepted minimum image rating(...);
@@ -78,3 +82,10 @@ Explores an url.
   + `identify` (Boolean) [false] - identify image `width`, `height` and `type` by downloading data;
   + `data` (Boolean) [false] - set image `data` property. Works only if `identify` is true.
 
+
+## Changelog
+
+#### v0.0.7 - May 22, 2015
+
+- filter images by view size - width & heigth detected in image attributes
+- merge images with same src
