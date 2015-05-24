@@ -73,6 +73,7 @@ Explores an url.
     - `minRating` (Number) [0] - accepted minimum image rating(...);
     - `minRatio` (Number) [null] - accepted minimum image ratio (`ratio`=`width`/`height`);
     - `maxRatio` (Number) [null] - accepted maximum image ratio;
+    - `invalidRatio` (Number | [Number]) [1] - example: value *[1]* will exclude all images with width=height;
     - `invalidExtensions` ([String]) [gif, png] - invalid image extensions;
     - `src` (RegExp) [*see source code*] - invalidate image by SRC;
     - `extraSrc` (RegExp) - invalidate image by SRC;
