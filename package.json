@@ -1,6 +1,6 @@
 {
   "name": "html-explorer",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "HTML Page Explorer",
   "main": "./lib/explorer.js",
   "scripts": {
@@ -26,6 +26,8 @@
     "lodash": "^3.8.0",
     "request": "^2.55.0",
     "bluebird": "^2.9.25",
-    "image-size": "^0.3.5"
+    "image-size": "^0.3.5",
+    "charset": "^1.0.0",
+    "iconv-lite": "^0.4.10"
   }
 }

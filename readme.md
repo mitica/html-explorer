@@ -86,6 +86,11 @@ Explores an url.
 
 ## Changelog
 
+#### v0.0.8 - May 29, 2015
+
+- detect charset from content-type response header
+- image filter: `invalidRatio`
+
 #### v0.0.7 - May 22, 2015
 
 - filter images by view size - width & heigth detected in image attributes
