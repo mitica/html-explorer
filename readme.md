@@ -11,6 +11,7 @@ Currently it extracts:
   + `canonical`
   + `feeds`
 - Main images - a ordered list of images;
+- Main videos - a ordered list of videos;
 
 ## Usage
 
@@ -47,6 +48,12 @@ explorer.explore('http://edition.cnn.com/')
   + `type` (String) - (only if `identify` option is true) - can be: `bmp`, `gif`, `jpg`, `png`, `psd`, `svg`, `tiff` or `webp`;
   + `data` (Buffer) - (only if `identify` option is true) - image data.
 
+- `videos` ([Video]) - a list of videos:
+  + `sourceType` (String) - video source type: `URL`, `YOUTUBE` or `VIMEO`;
+  + `sourceId` (String) - depends of `sourceType`: url or source id;
+  + `width` (Number) - video width;
+  + `height` (Number) - video height;
+
 ## API
 
 ### `explorer.explore(url, [options])`
@@ -63,7 +70,7 @@ Explores an url.
   + `validator` (Function) [*noop*] - Validates page after exploring info, throw an error if invalid;
   + `html` (Boolean|String) [false] - Return HTML text or not. If is string it will be used as remote HTML body;
 
-- `images` - images explorer options:
+- `images` (Boolean|Object) - images explorer options:
   + `limit` (Number) [5] - maximum number of images to return;
   + `filter` (Object):
     - `minViewHeight` (Number) [180] - accepted minimum image view height;
@@ -83,8 +90,24 @@ Explores an url.
   + `identify` (Boolean) [false] - identify image `width`, `height` and `type` by downloading data;
   + `data` (Boolean) [false] - set image `data` property. Works only if `identify` is true.
 
+- `video` (Boolean|Object) - video explorer options:
+  + `limit` (Number) [1] - maximum number or videos to return;
+  + `filter` (Object):
+    - `minHeight` (Number) [200] - accepted minimum image height;
+    - `minWidth` (Number) [250] - accepted minimum image width;
+    - `minRatio` (Number) [null] - accepted minimum image ratio (`ratio`=`width`/`height`);
+    - `maxRatio` (Number) [null] - accepted maximum image ratio;
+    - `invalidRatio` (Number | [Number]) [1] - example: value *[1]* will exclude all images with width=height;
+    - `src` (RegExp) [*see source code*] - invalidate image by SRC;
+    - `extraSrc` (RegExp) - invalidate image by SRC;
+
 
 ## Changelog
+
+#### v0.1.0 - May 30, 2015
+
+- detect embedded videos
+- better images order
 
 #### v0.0.8 - May 29, 2015
 
