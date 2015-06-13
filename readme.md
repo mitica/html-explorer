@@ -89,6 +89,7 @@ Explores an url.
     - `invalidTypes` (String|[String]) - invalid image types;
   + `identify` (Boolean) [false] - identify image `width`, `height` and `type` by downloading data;
   + `data` (Boolean) [false] - set image `data` property. Works only if `identify` is true.
+  + `timeout` (Number) [1000] - image downloading timeout, in ms.
 
 - `video` (Boolean|Object) - video explorer options:
   + `limit` (Number) [1] - maximum number or videos to return;
@@ -103,6 +104,11 @@ Explores an url.
 
 
 ## Changelog
+
+#### v0.1.1 - June 13, 2015
+
+- decode page urls
+- image downloading timeout
 
 #### v0.1.0 - May 30, 2015
 
