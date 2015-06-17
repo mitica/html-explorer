@@ -49,7 +49,7 @@ explorer.explore('http://edition.cnn.com/')
   + `data` (Buffer) - (only if `identify` option is true) - image data.
 
 - `videos` ([Video]) - a list of videos:
-  + `sourceType` (String) - video source type: `URL`, `YOUTUBE` or `VIMEO`;
+  + `sourceType` (String) - video source type: `URL`, `YOUTUBE`, `VIMEO` or `IFRAME`;
   + `sourceId` (String) - depends of `sourceType`: url or source id;
   + `width` (Number) - video width;
   + `height` (Number) - video height;
