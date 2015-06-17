@@ -101,9 +101,17 @@ Explores an url.
     - `invalidRatio` (Number | [Number]) [1] - example: value *[1]* will exclude all images with width=height;
     - `src` (RegExp) [*see source code*] - invalidate image by SRC;
     - `extraSrc` (RegExp) - invalidate image by SRC;
+  + `priority` ([String]) - video source type priority - default: `['YOUTUBE', 'VIMEO', 'URL', 'IFRAME']`;
+  + `customFinders` ([Finder]) - a list of custom video fiders.
 
 
 ## Changelog
+
+#### v0.1.2 - June 17, 2015
+
+- custom video finders
+- sort videos by priority option
+- head(og:video) video finder
 
 #### v0.1.1 - June 13, 2015
 
