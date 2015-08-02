@@ -12,6 +12,7 @@ Currently it extracts:
   + `feeds`
 - Main images - a ordered list of images;
 - Main videos - a ordered list of videos;
+- Page content - main page content/article;
 
 ## Usage
 
@@ -28,9 +29,11 @@ explorer.explore('http://edition.cnn.com/')
 - `url` (String) - input `url` param;
 - `href` (String) - server response url;
 - `canonical` (String) - page canonical;
-- `title` (String)
-- `description` (String)
-- `keywords` (String)
+- `title` (String);
+- `description` (String);
+- `keywords` (String);
+
+- `content` (String);
 
 - `feeds` ([Feed]) - list of feeds:
   + `title` (String);
@@ -70,6 +73,8 @@ Explores an url.
   + `validator` (Function) [*noop*] - Validates page after exploring info, throw an error if invalid;
   + `html` (Boolean|String) [false] - Return HTML text or not. If is string it will be used as remote HTML body;
 
+- `content` (Boolean) - content options;
+
 - `images` (Boolean|Object) - images explorer options:
   + `limit` (Number) [5] - maximum number of images to return;
   + `filter` (Object):
@@ -106,6 +111,12 @@ Explores an url.
 
 
 ## Changelog
+
+#### v0.1.4 - August 2, 2015
+
+- tests
+- extracting page content
+- editorconfig, eslint
 
 #### v0.1.2 - June 17, 2015
 
