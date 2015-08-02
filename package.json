@@ -4,7 +4,7 @@
   "description": "HTML Page Explorer",
   "main": "./lib/explorer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "./node_modules/mocha/bin/mocha -t 4000",
     "lint": "eslint lib"
   },
   "repository": {
@@ -32,5 +32,8 @@
     "node-readability": "^1.0.2",
     "request": "^2.55.0",
     "sanitizer": "^0.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
   }
 }
