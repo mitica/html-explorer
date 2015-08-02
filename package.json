@@ -4,7 +4,8 @@
   "description": "HTML Page Explorer",
   "main": "./lib/explorer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint lib"
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,13 @@
   },
   "homepage": "https://github.com/Mitica/html-explorer",
   "dependencies": {
+    "bluebird": "^2.9.25",
+    "charset": "^1.0.0",
     "cheerio": "^0.19.0",
+    "iconv-lite": "^0.4.10",
+    "image-size": "^0.3.5",
     "lodash": "^3.8.0",
     "request": "^2.55.0",
-    "bluebird": "^2.9.25",
-    "image-size": "^0.3.5",
-    "charset": "^1.0.0",
-    "iconv-lite": "^0.4.10"
+    "unfluff": "^0.11.0"
   }
 }
