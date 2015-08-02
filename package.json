@@ -29,7 +29,8 @@
     "iconv-lite": "^0.4.10",
     "image-size": "^0.3.5",
     "lodash": "^3.8.0",
+    "node-readability": "^1.0.2",
     "request": "^2.55.0",
-    "unfluff": "^0.11.0"
+    "sanitizer": "^0.1.2"
   }
 }
