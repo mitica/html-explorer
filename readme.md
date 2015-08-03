@@ -13,6 +13,7 @@ Currently it extracts:
 - Main images - a ordered list of images;
 - Main videos - a ordered list of videos;
 - Page content - main page content/article;
+- Page encoding;
 
 ## Usage
 
@@ -34,6 +35,7 @@ explorer.explore('http://edition.cnn.com/')
 - `keywords` (String);
 
 - `content` (String);
+- `encoding` (String): utf8, windows-1251, iso-8859-2, etc.;
 
 - `feeds` ([Feed]) - list of feeds:
   + `title` (String);
@@ -73,7 +75,13 @@ Explores an url.
   + `validator` (Function) [*noop*] - Validates page after exploring info, throw an error if invalid;
   + `html` (Boolean|String) [false] - Return HTML text or not. If is string it will be used as remote HTML body;
 
-- `content` (Boolean) - content options;
+- `content` (Boolean|Object) - content options:
+  + `filter` (Boolean|Object):
+    - `minLine`: (Number) [50] - accepted minimum line length;
+    - `minPhrase`: (Number) [100] - accepted minimum phrase length;
+    - `phraseEndRegex`: (Regex) default: /[.!?:;¡¿%]$/ - end phrase puctuation regex;
+    - `phraseEnd`: (Boolean) [false] - require phrase to end with a puctuation;
+    - `maxInvalidLines`: (Number) [3] - maximum consecutive invalid lines;
 
 - `images` (Boolean|Object) - images explorer options:
   + `limit` (Number) [5] - maximum number of images to return;
@@ -111,6 +119,11 @@ Explores an url.
 
 
 ## Changelog
+
+#### v0.1.5 - August 3, 2015
+
+- filter page content
+- better encoding detection & add to the response object
 
 #### v0.1.4 - August 2, 2015
 
