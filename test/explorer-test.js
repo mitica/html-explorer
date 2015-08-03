@@ -28,4 +28,15 @@ describe('explorer', function() {
 			assert.equal('W Polsce najwięcej wydają turyści amerykańscy, ale najwięcej jest niemieckich', result.title);
 		});
 	});
+	it('explore video microdata', function() {
+		return explorer.explore('http://wp.tv/i,kalorycznocs-i-wady-wakacyjnych-przekasek,mid,1751268,klip.html?_ticrsn=3&ticaid=515563', {
+			images: {
+				identify: true,
+				timeout: 300
+			}
+		}).then(function(result) {
+			// console.log(result);
+			assert.equal(1, result.videos.length);
+		});
+	});
 });
