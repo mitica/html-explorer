@@ -120,6 +120,10 @@ Explores an url.
 
 ## Changelog
 
+#### v0.1.6 - August 3, 2015
+
+- explore videos from microdata
+
 #### v0.1.5 - August 3, 2015
 
 - filter page content
