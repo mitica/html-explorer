@@ -39,4 +39,15 @@ describe('explorer', function() {
 			assert.equal(1, result.videos.length);
 		});
 	});
+	it('explore video', function() {
+		return explorer.explore('http://www.publika.md/luptele-continua-in-ucraina-doi-soldati-au-murit-iar-alti-sapte-au-fost-raniti-in-doar-24-de-ore_2373371.html', {
+			images: {
+				identify: true,
+				timeout: 300
+			}
+		}).then(function(result) {
+			// console.log(result);
+			assert.equal(1, result.videos.length);
+		});
+	});
 });
