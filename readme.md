@@ -120,6 +120,11 @@ Explores an url.
 
 ## Changelog
 
+#### v0.1.9 - August 15, 2015
+
+- explore content with `readability-js`
+- fix videos explore bug
+
 #### v0.1.6 - August 3, 2015
 
 - explore videos from microdata
