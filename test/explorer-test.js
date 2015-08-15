@@ -24,7 +24,7 @@ describe('explorer', function() {
 			content: {
 			}
 		}).then(function(result) {
-			// console.log(result);
+			// console.log('content',result.content);
 			assert.equal('W Polsce najwięcej wydają turyści amerykańscy, ale najwięcej jest niemieckich', result.title);
 		});
 	});
@@ -47,6 +47,7 @@ describe('explorer', function() {
 			}
 		}).then(function(result) {
 			// console.log(result);
+			// console.log('content',result.content);
 			assert.equal(1, result.videos.length);
 		});
 	});
