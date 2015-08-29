@@ -29,7 +29,7 @@
     "iconv-lite": "^0.4.10",
     "image-size": "^0.3.5",
     "lodash": "^3.8.0",
-    "readability-js": "^1.0.4",
+    "readability-js": "^1.0.6",
     "request": "^2.55.0",
     "sanitizer": "^0.1.2"
   },
