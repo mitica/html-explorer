@@ -120,6 +120,10 @@ Explores an url.
 
 ## Changelog
 
+#### v0.1.11 - August 16, 2016
+
+- find videos from known iframes
+
 #### v0.1.9 - August 15, 2015
 
 - explore content with `readability-js`
