@@ -34,8 +34,37 @@ describe('explorer', function() {
 			})
 			.then(function(result) {
 				assert.equal(1, result.videos.length);
-				console.log(result.videos);
+				// console.log(result.videos);
 			});
 	});
+
+	it('should find youtube videos', function() {
+		return explorer.explore('http://stirileprotv.ro/stiri/sport/bilantul-violentelor-de-la-marsilia-31-de-raniti-dintre-care-patru-in-stare-grava-sase-suporteri-au-fost-arestati-foto.html')
+			.then(function(result) {
+				// console.log(result.videos);
+				assert.equal(1, result.videos.length);
+			});
+	});
+
+	it('should find iframe videos', function() {
+		return explorer.explore('http://stirileprotv.ro/stiri/international/atac-armat-intr-un-club-de-noapte-din-orlando-in-statul-american-florida-mesajul-aparut-pe-facebook-inainte-de-incident.html', {
+				video: { limit: 3 }
+			})
+			.then(function(result) {
+				// console.log(result.videos);
+				assert.equal(3, result.videos.length);
+			});
+	});
+
+	// no find slash videos!
+	// it('should find video vesti.ru', function() {
+	// 	return explorer.explore('http://www.vesti.ru/doc.html?id=2765505', {
+	// 			video: { limit: 3 }
+	// 		})
+	// 		.then(function(result) {
+	// 			console.log(result);
+	// 			// assert.equal(3, result.videos.length);
+	// 		});
+	// });
 
 });
