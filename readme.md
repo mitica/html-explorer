@@ -127,7 +127,7 @@ Explores an url.
 - filter page content by relevancy score option;
 - added `lang` option;
 - using [ascripe](https://github.com/Mitica/ascrape-js) module instead of readability-js;
-- using [in-text-search](https://github.com/Mitica/in-text-search-js) module instead of readability-js;
+- using [in-text-search](https://github.com/Mitica/in-text-search-js) module;
 
 #### v0.1.11 - August 16, 2016
 
