@@ -6,6 +6,7 @@ var explorer = require('../lib/explorer');
 describe('explorer', function() {
 	it('explore charset=windows-1251', function() {
 		return explorer.explore('http://www.gazeta.ru/social/news/2015/08/02/n_7428985.shtml', {
+			page: { lang: 'ru' },
 			images: {
 				identify: true,
 				timeout: 300
@@ -17,12 +18,12 @@ describe('explorer', function() {
 	});
 	it('explore charset=iso-8859-2', function() {
 		return explorer.explore('http://www.wprost.pl/ar/516408/w-polsce-najwiecej-wydaja-turysci-amerykanscy-ale-najwiecej-jest-niemieckich/', {
+			page: { lang: 'pl' },
 			images: {
 				identify: true,
 				timeout: 300
 			},
-			content: {
-			}
+			content: {}
 		}).then(function(result) {
 			// console.log('content',result.content);
 			assert.equal('W Polsce najwięcej wydają turyści amerykańscy, ale najwięcej jest niemieckich', result.title);
@@ -30,6 +31,7 @@ describe('explorer', function() {
 	});
 	it('explore video microdata', function() {
 		return explorer.explore('http://wp.tv/i,kalorycznocs-i-wady-wakacyjnych-przekasek,mid,1751268,klip.html?_ticrsn=3&ticaid=515563', {
+			page: { lang: 'pl' },
 			images: {
 				identify: true,
 				timeout: 300
@@ -41,6 +43,7 @@ describe('explorer', function() {
 	});
 	it('explore video', function() {
 		return explorer.explore('http://www.publika.md/luptele-continua-in-ucraina-doi-soldati-au-murit-iar-alti-sapte-au-fost-raniti-in-doar-24-de-ore_2373371.html', {
+			page: { lang: 'ro' },
 			images: {
 				identify: true,
 				timeout: 300

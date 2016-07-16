@@ -23,13 +23,14 @@
   },
   "homepage": "https://github.com/Mitica/html-explorer",
   "dependencies": {
+    "ascrape": "^0.1.0",
     "bluebird": "^2.9.25",
     "charset": "^1.0.0",
     "cheerio": "^0.19.0",
     "iconv-lite": "^0.4.10",
     "image-size": "^0.3.5",
+    "in-text-search": "^0.1.0",
     "lodash": "^3.8.0",
-    "readability-js": "^1.0.6",
     "request": "^2.55.0",
     "sanitizer": "^0.1.2"
   },

@@ -74,6 +74,7 @@ Explores an url.
   + `feeds` (Boolean|Function) - find or not, function for validating a feed;
   + `validator` (Function) [*noop*] - Validates page after exploring info, throw an error if invalid;
   + `html` (Boolean|String) [false] - Return HTML text or not. If is string it will be used as remote HTML body;
+  + `lang` (String) - page language 2 chars code;
 
 - `content` (Boolean|Object) - content options:
   + `filter` (Boolean|Object):
@@ -82,6 +83,7 @@ Explores an url.
     - `phraseEndRegex`: (Regex) default: /[.!?:;¡¿%]$/ - end phrase puctuation regex;
     - `phraseEnd`: (Boolean) [false] - require phrase to end with a puctuation;
     - `maxInvalidLines`: (Number) [3] - maximum consecutive invalid lines;
+    - `minScore`: (Number) [0.3] - min in text search score: 0 to 1;
 
 - `images` (Boolean|Object) - images explorer options:
   + `limit` (Number) [5] - maximum number of images to return;
@@ -119,6 +121,13 @@ Explores an url.
 
 
 ## Changelog
+
+#### v0.1.12 - July 16, 2016
+
+- filter page content by relevancy score option;
+- added `lang` option;
+- using [ascripe](https://github.com/Mitica/ascrape-js) module instead of readability-js;
+- using [in-text-search](https://github.com/Mitica/in-text-search-js) module instead of readability-js;
 
 #### v0.1.11 - August 16, 2016
 
